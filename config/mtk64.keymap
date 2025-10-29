@@ -38,22 +38,6 @@
 };
 
 / {
-    macros {
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp M &kp A &kp R &kp U &kp SPACE &kp SPACE &kp RET>;
-            label = "NEW_MACRO";
-        };
-
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp B &kp A &kp T &kp U &kp SPACE &kp SPACE &kp RET>;
-            label = "NEW_MACRO";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
