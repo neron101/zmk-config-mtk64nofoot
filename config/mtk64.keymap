@@ -68,7 +68,7 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LANGUAGE_1  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp RS(NUMBER_6)  &kp RS(N7)  &kp RS(N8)  &kp RS(N9)  &kp RS(N0)  &trans  &kp LANGUAGE_2  &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT  &kp PAGE_UP  &kp LANGUAGE_1  &kp HOME  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp LANGUAGE_2  &trans  &kp RS(SEMI)  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_UP  &kp LANGUAGE_1  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp RS(NUMBER_6)  &kp RS(N7)  &kp RS(N8)  &kp RS(N9)  &kp RS(N0)  &kp C_VOLUME_DOWN  &kp LANGUAGE_2  &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT  &kp PAGE_UP  &kp LANGUAGE_1  &kp HOME  &trans  &trans  &trans  &kp SLASH  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp LANGUAGE_2  &trans  &kp RS(SEMI)  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp K_MUTE  &trans
             >;
 
             sensor-bindings = <
