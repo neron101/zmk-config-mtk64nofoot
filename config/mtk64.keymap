@@ -43,7 +43,7 @@
 
         default_layer {
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp PLUS  &kp LEFT_BRACKET  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &mt RIGHT_SHIFT UNDER  &kp CAPS  &kp A  &mt LEFT_SHIFT S  &mt LEFT_SHIFT D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &mt RIGHT_CONTROL COLON  &kp SLASH  &kp LEFT_GUI  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp UP_ARROW  &lt 1 RIGHT_BRACKET  &kp N  &kp M  &kp COMMA  &kp DOT  &kp QUESTION  &kp LANGUAGE_1  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp DOWN_ARROW  &kp LEFT_WIN  &kp BACKSPACE  &kp TILDE  &kp LEFT_SHIFT  &kp LANG2  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt 3 SPACE  &lt 2 ENTER  &kp ENTER  &tog 1  &lt 3 SPACE  &lt 2 BACKSPACE  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
+&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp PLUS  &kp LEFT_BRACKET  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &mt RIGHT_SHIFT UNDER  &kp CAPS  &kp A  &mt LEFT_SHIFT S  &mt LEFT_SHIFT D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &mt RIGHT_CONTROL COLON  &kp SLASH  &kp LEFT_GUI  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp UP_ARROW  &lt 1 RIGHT_BRACKET  &kp N  &kp M  &kp COMMA  &kp DOT  &kp QUESTION  &kp LANGUAGE_1  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp DOWN_ARROW  &lt 3 SPACE  &kp BACKSPACE  &kp TILDE  &kp LEFT_SHIFT  &kp LANG2  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt 3 SPACE  &lt 2 ENTER  &kp ENTER  &tog 1  &lt 3 LEFT_WIN  &lt 2 BACKSPACE  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3
             >;
 
             sensor-bindings = <&scroll_left_right>, <&scroll_up_down>;
