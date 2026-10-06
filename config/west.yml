@@ -2,18 +2,37 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: cormoran
+      url-base: https://github.com/cormoran
     - name: mentako-ya
       url-base: https://github.com/mentako-ya
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
   projects:
+    # ZMK本体（DYA Studio対応のcormoran版）
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3 
+      remote: cormoran
+      revision: v0.3-branch+dya
       import: app/west.yml
+    # トラックボールドライバ（ZMK v0.3互換の版に固定）
     - name: zmk-pmw3610-driver
       remote: mentako-ya
-      revision: main
+      revision: 5893088352927c6601bdc87d0f50d1fa4003c46d
     - name: zmk-rgbled-widget
-      remote: mentako-ya
+      remote: caksoylar
+      revision: v0.3-branch
+    # DYA Studio用モジュール
+    - name: zmk-module-ble-management
+      remote: cormoran
+      revision: zmk-v0.3.0.0
+    - name: zmk-module-battery-history
+      remote: cormoran
+      revision: main
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+      revision: main
+    - name: zmk-behavior-runtime-sensor-rotate
+      remote: cormoran
       revision: main
   self:
     path: config
