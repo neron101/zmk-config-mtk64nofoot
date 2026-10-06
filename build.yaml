@@ -1,4 +1,5 @@
 ---
+# nofoot: right (central) + left (peripheral) only
 include:
   - board: seeeduino_xiao_ble
     shield: mtk64_R rgbled_adapter
@@ -8,9 +9,6 @@ include:
   - board: seeeduino_xiao_ble
     shield: mtk64_L rgbled_adapter
     artifact-name: mtk64_L
-  - board: seeeduino_xiao_ble
-    shield: mtk64_FOOT rgbled_adapter
-    artifact-name: mtk64_FOOT
   - board: seeeduino_xiao_ble
     shield: settings_reset
     artifact-name: settings_reset
