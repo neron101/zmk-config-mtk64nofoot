@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include "keycode_japanese.h"
+#include <behaviors/runtime-sensor-rotate.dtsi>
 
 // スクロール量の設定
 
@@ -15,24 +16,37 @@
 
 / {
     behaviors {
-        // 垂直スクロール用のbehaviorの設定
-
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
+        // ロータリーエンコーダー（DYA Studioから変更可。以下は初期値）
+        scroll_up_down: scroll_up_down {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>; // スクロールのタップ時間
+            tap-ms = <20>;
+            cw-binding = <&msc SCRL_UP>;
+            ccw-binding = <&msc SCRL_DOWN>;
         };
 
-        // 水平スクロール用のbehaviorの設定
-
-        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
+        scroll_left_right: scroll_left_right {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            tap-ms = <20>;
+            cw-binding = <&msc SCRL_LEFT>;
+            ccw-binding = <&msc SCRL_RIGHT>;
+        };
 
-            tap-ms = <20>; // スクロールのタップ時間
+        rsr_tab: rsr_tab {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <5>;
+            cw-binding = <&kp TAB>;
+            ccw-binding = <&kp LC(TAB)>;
+        };
+
+        rsr_pg: rsr_pg {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <5>;
+            cw-binding = <&kp PG_UP>;
+            ccw-binding = <&kp PG_DN>;
         };
     };
 };
@@ -60,10 +74,7 @@
 &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp RS(NUMBER_6)  &kp RS(N7)  &kp RS(N8)  &kp RS(N9)  &kp RS(N0)  &trans  &kp LANGUAGE_1  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp RS(NUMBER_6)  &kp RS(N7)  &kp RS(N8)  &kp RS(N9)  &kp RS(N0)  &trans  &kp LANGUAGE_2  &kp LEFT  &kp UP  &kp RIGHT_ARROW  &kp PAGE_UP  &kp LANGUAGE_1  &kp HOME  &mkp MB1  &trans  &mkp MB2  &kp SLASH  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &kp PAGE_DOWN  &kp LANGUAGE_2  &trans  &kp RS(SEMI)  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp TAB LC(TAB) 
-                &inc_dec_kp PG_UP PG_DN
-            >;
+            sensor-bindings = <&rsr_tab>, <&rsr_pg>;
         };
 
         layer_3 {
@@ -71,10 +82,7 @@
 &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp RS(NUMBER_6)  &kp RS(N7)  &kp RS(N8)  &kp RS(N9)  &kp RS(N0)  &trans  &kp LANGUAGE_1  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &kp LANGUAGE_2  &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT  &kp PAGE_UP  &kp LANGUAGE_1  &kp HOME  &mkp MB1  &trans  &mkp MB2  &kp SLASH  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp LANGUAGE_2  &kp LS(SEMI)  &kp RS(SEMI)  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &lt 3 SPACE  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <
-                &scroll_left_right
-                &scroll_up_down
-            >;
+            sensor-bindings = <&scroll_left_right>, <&scroll_up_down>;
         };
 
         layer_4 {
